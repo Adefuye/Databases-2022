@@ -46,22 +46,4 @@ public class database{
             System.out.println("READER FAIL");
         }
     }
-
-    public void writeFile(){
-        //write the file to a .txt
-
-    }
-
-    //Declare a variable to write results to an output file
-    //Read the file
-
-    //For each line in the file:
-    //	Initialize an output string
-    //	Split the values on the commas, i.e., line.split(",")
-    //	For each value:
-    //		If it is an integer, add "Numeric" to the output string			
-    //		Else, assume it is string and add "Text" to the output string
-    //	Write the output string to the output file.
-
-
 }
