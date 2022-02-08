@@ -28,7 +28,7 @@ public class database{
 
                 for(int i = 0; i < in.length; i++){
                     try{
-                        Integer.parseInt(in[i]);
+                        Integer.parseInt(in[i].trim());
                         output+="Integer";
                     }
                     catch(Exception e){
