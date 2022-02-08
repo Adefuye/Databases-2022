@@ -5,22 +5,23 @@ public class database{
     public static void main(String[] args)
     {
         File f = new File("outputFile.txt");
-        //System.out.println(f);
-
-        //readFile(args[0]);
-        readFile();
+        for(String s: args)
+        {
+           readFile(s);
+        }
     }
 
 
 
-    public static void readFile(){
-        //read the file to an array
-        String inputFile = "phase1.csv";
+    public static void readFile(String input){
+        String inputFile = input;
         BufferedReader reader = null;
         String line= "";
 
         try{
             reader = new BufferedReader(new FileReader(inputFile));
+            FileWriter outputWriter = new FileWriter("outputFile.txt");
+
             while((line = reader.readLine()) != null){
                 String output = "";
                 String[] in = line.split(",");
@@ -33,10 +34,13 @@ public class database{
                     catch(Exception e){
                         output+="Text";
                     }
-                    output+=", ";
+                    if(i < in.length-1){
+                        output+=", ";
+                    }
                 }
-                System.out.println(output);
+                outputWriter.write(output + "\n");
             }
+            outputWriter.close();
         }
         catch(Exception e){
             System.out.println("READER FAIL");
@@ -45,6 +49,7 @@ public class database{
 
     public void writeFile(){
         //write the file to a .txt
+
     }
 
     //Declare a variable to write results to an output file
