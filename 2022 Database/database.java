@@ -1,3 +1,8 @@
+/*
+Authors: Jaden Forrester
+         Emmanuel Adefuye
+ */
+
 import java.io.*;
 
 public class database{
